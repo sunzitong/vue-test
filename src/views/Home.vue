@@ -5,7 +5,6 @@
       <div class="dash" />
       <div class="desc">签约时选择月付时，可以使用本券抵月付服务费</div>
     </div>
-    <div class="revice-btn" @click="receiveMonthPayNotComeUp">立即领取</div>
     <div class="instructions">
       优惠券使用说明：
       <br />
@@ -25,12 +24,21 @@
       <br />
       8.珑珠抵扣金额部分不支持开具发票
     </div>
-    <CommonConfirm
-      v-if="showCommonConfirm"
-      @confrimCb="confrimCb"
-      :title="title"
-      :desc="desc"
+    <van-field
+      readonly
+      clickable
+      label="城市"
+      :value="value"
+      placeholder="选择城市"
+      @click="showPicker = true"
     />
+    <van-popup v-model="showPicker" round position="bottom">
+      <van-picker
+        show-toolbar
+        :columns="columns"
+        @cancel="showPicker = false"
+      />
+    </van-popup>
   </div>
 </template>
 
@@ -41,6 +49,13 @@ import { Component } from 'vue-property-decorator';
 
 @Component({})
 export default class PropsPage extends Vue {
+  showPicker = false;
+
+  columns = [
+    { text: '杭州', disabled: true },
+    { text: '宁波' },
+    { text: '温州' },
+  ];
 }
 </script>
 <style lang="less" scoped>
