@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vue-property-decorator": "^9.1.2",
-    "vue-class-component": "^7.2.6",
     "less": "^4.1.1",
     "less-loader": "^7.3.0",
-    "vant": "^2.12.14"
+    "postcss-plugin-px2rem": "^0.8.1",
+    "vant": "^2.12.14",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2",
+    "vue-router": "^3.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -29,5 +30,10 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   }
 }

@@ -2,7 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 // rem.js计算
-// import './plugins/rem';
+import './plugins/rem';
 // vant ui组件
 import './plugins/vant';
 
