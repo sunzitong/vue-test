@@ -15,4 +15,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+input {
+  padding: 0px;
+}
 </style>
