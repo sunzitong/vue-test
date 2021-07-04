@@ -24,5 +24,6 @@ module.exports = {
     'no-param-reassign': 0,
     'prefer-destructuring': 0,
     'camelcase': 0,
+    'class-methods-use-this': 0,
   },
 };
